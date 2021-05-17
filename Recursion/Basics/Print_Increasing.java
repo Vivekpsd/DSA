@@ -1,22 +1,19 @@
 import java.util.*;
 
-public class Print_Decreasing {
-
+public class Print_Increasing {
     public static void main(String[] args) throws Exception {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
-        printDecreasing(n);
+        printIncreasing(n);
 
         scn.close();
     }
 
-    public static void printDecreasing(int n) {
-
+    public static void printIncreasing(int n) {
         if (n == 0) {
             return;
         }
+        printIncreasing(n - 1);
         System.out.println(n);
-        printDecreasing(n - 1);
     }
-
 }
